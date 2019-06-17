@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Author</class>
- <widget name="Author" class="QDialog">
+ <widget class="QDialog" name="Author">
   <property name="geometry">
    <rect>
     <x>0</x>

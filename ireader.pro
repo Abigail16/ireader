@@ -4,7 +4,6 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
 QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -36,7 +35,8 @@ HEADERS += \
         mainwindow.h \
     register.h \
     user.h \
-    author.h
+    author.h \
+    connection.h
 
 FORMS += \
         mainwindow.ui \
@@ -48,3 +48,10 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../Qt5.12.1/5.12.1/clang_64/plugins/sqldrivers/release/ -lqsqlmysql
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../Qt5.12.1/5.12.1/clang_64/plugins/sqldrivers/debug/ -lqsqlmysql
+else:unix: LIBS += -L$$PWD/../../Qt5.12.1/5.12.1/clang_64/plugins/sqldrivers/ -lqsqlmysql_debug
+
+INCLUDEPATH += $$PWD/../../Qt5.12.1/5.12.1/clang_64/plugins/sqldrivers
+DEPENDPATH += $$PWD/../../Qt5.12.1/5.12.1/clang_64/plugins/sqldrivers
