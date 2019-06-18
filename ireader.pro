@@ -30,19 +30,25 @@ SOURCES += \
         mainwindow.cpp \
     register.cpp \
     user.cpp \
-    author.cpp
+    author.cpp \
+    addbook.cpp \
+    addchapter.cpp
 
 HEADERS += \
         mainwindow.h \
     register.h \
     user.h \
-    author.h
+    author.h \
+    addbook.h \
+    addchapter.h
 
 FORMS += \
         mainwindow.ui \
     register.ui \
     user.ui \
-    author.ui
+    author.ui \
+    addbook.ui \
+    addchapter.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

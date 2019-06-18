@@ -1,7 +1,9 @@
-#ifndef REGISTER_H
+﻿#ifndef REGISTER_H
 #define REGISTER_H
 
 #include <QDialog>
+
+
 
 namespace Ui {
 class Register;
@@ -14,6 +16,9 @@ class Register : public QDialog
 public:
     explicit Register(QWidget *parent = nullptr);
     ~Register();
+
+private slots:
+    void on_buttonBox_accepted();
 
 private:
     Ui::Register *ui;

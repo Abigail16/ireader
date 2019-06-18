@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Register</class>
- <widget class="QDialog" name="Register">
+ <class>AddChapter</class>
+ <widget class="QDialog" name="AddChapter">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>407</width>
-    <height>308</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,86 +29,73 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>87</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>50</y>
-     <width>72</width>
-     <height>15</height>
+     <x>20</x>
+     <y>30</y>
+     <width>101</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>注册中心</string>
+    <string>选择您的书籍</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QTextEdit" name="chapterText">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>140</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>180</y>
-     <width>121</width>
-     <height>31</height>
+     <x>150</x>
+     <y>60</y>
+     <width>241</width>
+     <height>161</height>
     </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>140</y>
+     <x>240</x>
+     <y>30</y>
      <width>72</width>
      <height>15</height>
     </rect>
    </property>
    <property name="text">
-    <string>用户名</string>
+    <string>章节内容</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="chapterName">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>190</y>
+     <x>40</x>
+     <y>110</y>
      <width>72</width>
      <height>15</height>
     </rect>
    </property>
    <property name="text">
-    <string>密码</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>100</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>100</y>
-     <width>72</width>
-     <height>15</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>昵称</string>
+    <string>章节名</string>
    </property>
   </widget>
  </widget>
@@ -117,7 +104,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Register</receiver>
+   <receiver>AddChapter</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -133,7 +120,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Register</receiver>
+   <receiver>AddChapter</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
